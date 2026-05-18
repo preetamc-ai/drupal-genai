@@ -1,0 +1,16 @@
+name: 'AI Guardrails Prompt Safety'
+description: 'Installs prompt safety guardrails for the Drupal AI module. Blocks structurally malicious input (XSS, script injection, HTML/CSS/JavaScript attacks) and semantically harmful requests (legal advice, medical advice, sensitive topics, and prompt manipulation attempts).'
+type: 'AI Initiative'
+
+install:
+  - ai
+
+config:
+  strict: false
+  import:
+    ai: '*'
+  actions:
+    ai.settings:
+      verifySetupAi:
+        operation_type_has_default_model:
+          - chat

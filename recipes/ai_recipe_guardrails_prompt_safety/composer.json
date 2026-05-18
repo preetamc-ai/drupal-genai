@@ -1,0 +1,24 @@
+{
+    "name": "drupal/ai_recipe_guardrails_prompt_safety",
+    "description": "AI Guardrails Prompt Safety recipe for the Drupal AI module. Installs guardrails to block injection attacks, XSS patterns, and liability-triggering topics such as legal advice, medical advice, and sensitive subjects.",
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/ai_recipe_guardrails_prompt_safety",
+    "authors": [
+        {
+            "name": "Artem Dmitriiev",
+            "homepage": "https://www.drupal.org/u/admitriiev"
+        },
+        {
+            "name": "Christoph Breidert",
+            "homepage": "https://www.drupal.org/u/breidert"
+        }
+    ],
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/ai_recipe_guardrails_prompt_safety"
+    },
+    "require": {
+        "drupal/core": "^11.2",
+        "drupal/ai": "^1.3"
+    }
+}

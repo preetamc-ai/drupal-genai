@@ -1,0 +1,11 @@
+name: 'AI Guardrails PII'
+description: 'Installs PII protection guardrails for the Drupal AI module. Detects and blocks email addresses, credit card numbers, IBANs, and international phone numbers in both user input and AI output.'
+type: 'AI'
+
+install:
+  - ai
+
+config:
+  strict: false
+  import:
+    ai: '*'

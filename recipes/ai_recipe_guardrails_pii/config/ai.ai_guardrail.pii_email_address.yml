@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: pii_email_address
+label: 'PII: Email Address'
+description: 'Detects email addresses in text. Used to prevent personal contact data from being forwarded to third-party AI providers, stored in conversation logs, or surfaced from RAG sources.'
+guardrail: regexp_guardrail
+guardrail_settings:
+  regexp_pattern: '/[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}/i'
+  violation_message: 'This message was blocked because it contains an email address.'

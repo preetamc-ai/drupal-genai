@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+id: prompt_safety_liability
+label: 'Prompt Safety: Liability'
+description: 'Blocks requests covering topics that carry legal or reputational risk for the site owner, including medical advice, legal advice, and socially divisive subjects. Apply this guardrail set to any public-facing AI interaction where the operator cannot control what users ask and needs to limit exposure to sensitive domains.'
+pre_generate_guardrails:
+  plugin_id:
+    - liability_legal_advice
+    - liability_medical_advice
+    - liability_sensitive_topics
+post_generate_guardrails:
+  plugin_id: {  }
+stop_threshold: 0.8

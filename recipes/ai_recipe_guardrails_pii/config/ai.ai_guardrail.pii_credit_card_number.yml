@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: pii_credit_card_number
+label: 'PII: Credit Card Number'
+description: 'Detects payment card numbers in text. Covers the major card schemes (Visa, Mastercard, Amex, Discover) in plain, spaced, and hyphen-separated formats.'
+guardrail: regexp_guardrail
+guardrail_settings:
+  regexp_pattern: '/(?<!\d)(?:\d[\s-]?){12,19}\d(?!\d)/'
+  violation_message: 'This message was blocked because it contains a credit card number.'

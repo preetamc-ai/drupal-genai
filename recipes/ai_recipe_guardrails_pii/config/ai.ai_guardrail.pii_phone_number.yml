@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: pii_phone_number
+label: 'PII: Phone Number'
+description: 'Detects international phone numbers in text. Covers formats using international dialling prefixes.'
+guardrail: regexp_guardrail
+guardrail_settings:
+  regexp_pattern: '/(?<!\w)(?:\+|0|00)[1-9][0-9\s().-]{6,20}\d(?!\w)/'
+  violation_message: 'This message was blocked because it contains a phone number.'

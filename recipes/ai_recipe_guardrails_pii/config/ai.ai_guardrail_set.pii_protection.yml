@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies: {  }
+id: pii_protection
+label: 'PII Protection'
+description: 'Blocks personally identifiable information (PII) in both user input and AI output. Checks for email addresses, phone numbers, credit card numbers, and IBAN bank account numbers. Apply this guardrail set to any public-facing AI interactions to meet baseline GDPR and data protection requirements.'
+pre_generate_guardrails:
+  plugin_id:
+    - pii_iban
+    - pii_phone_number
+    - pii_credit_card_number
+    - pii_email_address
+post_generate_guardrails:
+  plugin_id:
+    - pii_iban
+    - pii_phone_number
+    - pii_credit_card_number
+    - pii_email_address
+stop_threshold: 0.8
