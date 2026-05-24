@@ -22,6 +22,7 @@
         "drupal/ai_provider_mistral": "^1.0@beta",
         "drupal/ai_provider_ollama": "^1.1@beta",
         "drupal/ai_provider_openai": "^1.2",
+        "drupal/ai_translate_plus": "^1.0@beta",
         "drupal/ai_vdb_provider_pinecone": "^1.1@beta",
         "drupal/core": "^11.2",
         "drupal/core-composer-scaffold": "^11.3",
