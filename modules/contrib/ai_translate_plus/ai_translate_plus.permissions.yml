@@ -1,0 +1,4 @@
+manage ai translate plus prompts:
+  title: 'Manage AI Translate Plus settings'
+  description: 'Configure prompts per entity type, bundle, and language, and disable fields.'
+  restrict access: true

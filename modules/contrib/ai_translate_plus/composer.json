@@ -1,0 +1,9 @@
+{
+  "name": "drupal/ai_translate_plus",
+  "description": "Extends AI Translate to allow per-entity-type and bundle prompts per language and disable translation for selected fields.",
+  "type": "drupal-module",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "drupal/ai": "^1.2.2"
+  }
+}

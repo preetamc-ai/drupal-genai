@@ -1,0 +1,13 @@
+name: 'AI Translate Plus'
+type: module
+description: 'Extends AI Translate to allow per-entity-type and bundle prompts per language and disable translation for selected fields.'
+package: 'AI'
+core_version_requirement: '^11'
+dependencies:
+  - ai:ai
+  - ai:ai_translate
+
+# Information added by Drupal.org packaging script on 2025-11-10
+version: '1.0.0-beta1'
+project: 'ai_translate_plus'
+datestamp: 1762788177

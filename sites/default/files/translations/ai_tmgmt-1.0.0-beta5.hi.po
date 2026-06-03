@@ -1,0 +1,18 @@
+# Hindi translation of AI Translation Management (TMGMT) (1.0.0-beta5)
+# Copyright (c) 2026 by the Hindi translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: AI Translation Management (TMGMT) (1.0.0-beta5)\n"
+"POT-Creation-Date: 2026-01-21 05:46+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: Hindi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "Advanced"
+msgstr "विकसित"
+msgid "Maximum length"
+msgstr "अधिकतम लंबाई"

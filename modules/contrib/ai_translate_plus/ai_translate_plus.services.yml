@@ -1,0 +1,25 @@
+parameters:
+  ai_translate_plus.skip_procedural_hook_scan: true
+
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  ai_translate_plus.translation_context:
+    class: Drupal\ai_translate_plus\Service\TranslationContextService
+  Drupal\ai_translate_plus\Service\TranslationContextService: '@ai_translate_plus.translation_context'
+
+  ai_translate_plus.text_extractor:
+    class: Drupal\ai_translate_plus\Decorator\TextExtractorDecorator
+    decorates: ai_translate.text_extractor
+    decoration_priority: 100
+    arguments:
+      - '@.inner'
+
+  ai_translate_plus.text_translator:
+    class: Drupal\ai_translate_plus\Decorator\TextTranslatorDecorator
+    decorates: ai_translate.text_translator
+    decoration_priority: 100
+    arguments:
+      - '@.inner'

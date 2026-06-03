@@ -1,0 +1,11 @@
+ai_translate_plus.base_settings_tab:
+  route_name: ai_translate.settings_form
+  title: 'Default Settings'
+  base_route: ai_translate.settings_form
+  weight: 0
+
+ai_translate_plus.settings_tab:
+  route_name: ai_translate_plus.settings_form
+  title: 'Plus Settings'
+  base_route: ai_translate.settings_form
+  weight: 20

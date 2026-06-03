@@ -1,0 +1,36 @@
+ai_translate_plus.settings_form:
+  path: '/admin/config/ai/ai-translate-plus'
+  defaults:
+    _form: '\Drupal\ai_translate_plus\Form\AiTranslatePlusOverviewForm'
+    _title: 'AI Translate Plus Settings'
+  requirements:
+    _permission: 'manage ai translate plus prompts'
+  options:
+    _admin_route: TRUE
+
+ai_translate_plus.settings.entity_type:
+  path: '/admin/config/ai/ai-translate-plus/{entity_type_id}'
+  defaults:
+    _form: '\Drupal\ai_translate_plus\Form\AiTranslatePlusSettingsForm'
+    _title: 'AI Translate Plus Settings'
+  requirements:
+    _permission: 'administer site configuration'
+    entity_type_id: '[a-zA-Z_]+'
+
+# Override the original ai_translate route to use our enhanced controller
+ai_translate.translate_content:
+  path: '/admin/content/{entity_type}/{entity_id}/translate/{lang_from}/{lang_to}'
+  defaults:
+    _controller: '\Drupal\ai_translate_plus\Controller\AiTranslateController::translate'
+  requirements:
+    _permission: 'administer ai translate'
+  options:
+    parameters:
+      entity_type:
+        type: string
+      entity_id:
+        type: string
+      lang_from:
+        type: string
+      lang_to:
+        type: string

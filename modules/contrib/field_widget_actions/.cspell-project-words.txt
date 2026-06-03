@@ -1,0 +1,7 @@
+autohide
+automator
+automators
+fontawesome
+glightbox
+mkdocs
+pymdownx

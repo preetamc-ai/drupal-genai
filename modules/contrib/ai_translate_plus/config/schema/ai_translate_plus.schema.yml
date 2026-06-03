@@ -1,0 +1,91 @@
+# New per-entity-type config schema
+ai_translate_plus.entity_type_settings.*:
+  type: config_entity
+  label: 'AI Translate Plus entity type settings'
+  mapping:
+    id:
+      type: string
+      label: 'Entity type ID'
+    label:
+      type: label
+      label: 'Label'
+    entity_type:
+      type: string
+      label: 'Entity type machine name'
+    entity_type_default_prompt:
+      type: string
+      label: 'Default prompt ID (all languages)'
+      constraints:
+        ConfigExists:
+          prefix: 'ai.ai_prompt.'
+    entity_type_prompts:
+      type: mapping
+      label: 'Per-language prompts for entity type'
+      mapping:
+        "*":
+          type: string
+          label: 'Prompt ID'
+          constraints:
+            ConfigExists:
+              prefix: 'ai.ai_prompt.'
+    entity_type_default_model:
+      type: string
+      label: 'Default model for all languages'
+    entity_type_models:
+      type: mapping
+      label: 'Per-language models for entity type'
+      mapping:
+        "*":
+          type: string
+          label: 'Provider model string'
+    bundle_default_prompts:
+      type: mapping
+      label: 'Bundle default prompts (all languages)'
+      mapping:
+        "*":
+          type: string
+          label: 'Default prompt ID (all languages)'
+          constraints:
+            ConfigExists:
+              prefix: 'ai.ai_prompt.'
+    bundle_prompts:
+      type: mapping
+      label: 'Per-bundle prompts'
+      mapping:
+        "*":
+          type: mapping
+          label: 'Language prompts for bundle'
+          mapping:
+            "*":
+              type: string
+              label: 'Prompt ID'
+              constraints:
+                ConfigExists:
+                  prefix: 'ai.ai_prompt.'
+    bundle_default_models:
+      type: mapping
+      label: 'Bundle default models (all languages)'
+      mapping:
+        "*":
+          type: string
+          label: 'Default provider model string (all languages)'
+    bundle_models:
+      type: mapping
+      label: 'Per-bundle models'
+      mapping:
+        "*":
+          type: mapping
+          label: 'Language models for bundle'
+          mapping:
+            "*":
+              type: string
+              label: 'Provider model string'
+    bundle_disabled_fields:
+      type: mapping
+      label: 'Disabled fields per bundle'
+      mapping:
+        "*":
+          type: sequence
+          label: 'List of disabled field names'
+          sequence:
+            type: string
